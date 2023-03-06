@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -32,6 +33,7 @@ html {
   box-sizing: border-box;
   -ms-overflow-style: scrollbar;
   height: -webkit-fill-available;
+  font-family: "Inter", sans-serif;
 }
 
 input,
@@ -111,21 +113,61 @@ section {
 }
 @media screen and (min-width: 0) {
   section {
-    padding: 0 toRem(15);
+    padding: 0 15px;
   }
 }
 @media screen and (min-width: 576px) {
   section {
-    padding: 0 toRem(40);
+    padding: 0 40px;
   }
 }
 @media screen and (min-width: 992px) {
   section {
-    padding: 0 toRem(70);
+    padding: 0 70px;
   }
 }
 @media screen and (min-width: 1200px) {
   section {
-    padding: 0 toRem(170);
+    padding: 0 260px;
   }
+}
+
+section.navbar-container .navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 80px;
+}
+section.navbar-container .navbar .logo {
+  font-size: 34px;
+  font-weight: 700;
+}
+section.navbar-container .navbar .logo .dot {
+  color: #1dbf73;
+}
+section.navbar-container .navbar .links nav ul {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+section.navbar-container .navbar .links nav ul li {
+  cursor: pointer;
+}
+section.navbar-container .navbar .links nav ul li .menu-item {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+section.navbar-container .navbar .links nav ul li .menu-item svg {
+  width: 19px;
+  height: 19px;
+}
+section.navbar-container .navbar .links nav ul li .menu-item a,
+section.navbar-container .navbar .links nav ul li .menu-item span {
+  text-decoration: none;
+  color: #111;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 600;
 }/*# sourceMappingURL=fiverr.css.map */

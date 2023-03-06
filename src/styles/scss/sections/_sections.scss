@@ -4,15 +4,15 @@ section {
     z-index: 2;
 
     @media screen and (min-width: map-get($gridBreakpoints, xs)) {
-        padding: 0 toRem(15);
+        padding: 0 15px;
     }
     @media screen and (min-width: map-get($gridBreakpoints, sm)) {
-        padding: 0 toRem(40);
+        padding: 0 40px;
     }
     @media screen and (min-width: map-get($gridBreakpoints, lg)) {
-        padding: 0 toRem(70);
+        padding: 0 70px;
     }
     @media screen and (min-width: map-get($gridBreakpoints, xl)) {
-        padding: 0 toRem(170);
+        padding: 0 260px;
     }
 }
