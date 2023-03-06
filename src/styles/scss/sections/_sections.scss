@@ -1,0 +1,18 @@
+section {
+    height: auto;
+    width: 100%;
+    z-index: 2;
+
+    @media screen and (min-width: map-get($gridBreakpoints, xs)) {
+        padding: 0 toRem(15);
+    }
+    @media screen and (min-width: map-get($gridBreakpoints, sm)) {
+        padding: 0 toRem(40);
+    }
+    @media screen and (min-width: map-get($gridBreakpoints, lg)) {
+        padding: 0 toRem(70);
+    }
+    @media screen and (min-width: map-get($gridBreakpoints, xl)) {
+        padding: 0 toRem(170);
+    }
+}
