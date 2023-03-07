@@ -1,10 +1,10 @@
 import React from "react";
 import NavLinkItem from "../../../ui/nav-link-item/NavLinkItem";
 
-const MultiNavItem = ({ menu }) => {
+const MultiNavItem = ({ menu, isScrolled }) => {
   return (
     <li>
-      <NavLinkItem menu={menu} />
+      <NavLinkItem menu={menu} isScrolled={isScrolled} />
     </li>
   );
 };

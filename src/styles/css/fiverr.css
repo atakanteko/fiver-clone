@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Petit+Formal+Script&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -52,7 +53,7 @@ body::-webkit-scrollbar {
   background-color: #f5f5f5;
 }
 body::-webkit-scrollbar-thumb {
-  background-color: #4d008c;
+  background-color: rgba(26, 25, 25, 0.5960784314);
 }
 
 body,
@@ -128,10 +129,27 @@ section {
 }
 @media screen and (min-width: 1200px) {
   section {
-    padding: 0 260px;
+    padding: 0 52px;
+  }
+}
+@media screen and (min-width: 1480px) {
+  section {
+    padding: 0 270px;
   }
 }
 
+section.navbar-container {
+  position: fixed;
+  top: 0;
+}
+section.navbar-container.bg-transparent {
+  background-color: transparent;
+  transition: background-color 0.3s linear;
+}
+section.navbar-container.bg-white {
+  background-color: #ffffff;
+  transition: background-color 0.3s linear;
+}
 section.navbar-container .navbar {
   display: flex;
   flex-direction: row;
@@ -142,6 +160,12 @@ section.navbar-container .navbar {
 section.navbar-container .navbar .logo {
   font-size: 34px;
   font-weight: 700;
+}
+section.navbar-container .navbar .logo .text.text-white {
+  color: #fff;
+}
+section.navbar-container .navbar .logo .text.text-black {
+  color: #111;
 }
 section.navbar-container .navbar .logo .dot {
   color: #1dbf73;
@@ -164,10 +188,106 @@ section.navbar-container .navbar .links nav ul li .menu-item svg {
   height: 19px;
 }
 section.navbar-container .navbar .links nav ul li .menu-item a,
-section.navbar-container .navbar .links nav ul li .menu-item span {
+section.navbar-container .navbar .links nav ul li .menu-item span,
+section.navbar-container .navbar .links nav ul li .menu-item svg {
   text-decoration: none;
-  color: #111;
   font-size: 16px;
   line-height: 24px;
-  font-weight: 600;
+  font-weight: 500;
+}
+section.navbar-container .navbar .links nav ul li .menu-item a.text-white,
+section.navbar-container .navbar .links nav ul li .menu-item span.text-white,
+section.navbar-container .navbar .links nav ul li .menu-item svg.text-white {
+  color: #fff;
+}
+section.navbar-container .navbar .links nav ul li .menu-item a.text-black,
+section.navbar-container .navbar .links nav ul li .menu-item span.text-black,
+section.navbar-container .navbar .links nav ul li .menu-item svg.text-black {
+  color: #111;
+}
+
+.hero-backgrounds {
+  min-height: 680px;
+}
+.hero-backgrounds section.hero-content {
+  height: 680px;
+  display: flex;
+  align-items: center;
+}
+.hero-backgrounds section.hero-content .left {
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+  flex: 6;
+  color: #fff;
+  font-size: 32px;
+  line-height: 56px;
+  font-weight: 700;
+}
+.hero-backgrounds section.hero-content .left .hero-title .handwriting {
+  font-family: "Petit Formal Script", cursive;
+}
+.hero-backgrounds section.hero-content .left .hero-search {
+  height: 48px;
+  padding-left: 16px;
+  background-color: #e78181;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  border-radius: 4px;
+  background-color: #fff;
+  overflow: hidden;
+}
+.hero-backgrounds section.hero-content .left .hero-search svg {
+  width: 24px;
+  height: 24px;
+  color: gray;
+}
+.hero-backgrounds section.hero-content .left .hero-search input {
+  border: none;
+  outline: none;
+  width: 100%;
+  height: 100%;
+  color: #404145;
+  font-size: 16px;
+}
+.hero-backgrounds section.hero-content .left .hero-search input:focus {
+  outline: none;
+}
+.hero-backgrounds section.hero-content .left .hero-search input::-moz-placeholder {
+  color: rgba(122, 122, 122, 0.6745098039);
+}
+.hero-backgrounds section.hero-content .left .hero-search input::placeholder {
+  color: rgba(122, 122, 122, 0.6745098039);
+}
+.hero-backgrounds section.hero-content .left .hero-search .button-search {
+  padding: 0 16px 0 16px;
+  font-size: 16px;
+  color: white;
+  background-color: #1dbf73;
+}
+.hero-backgrounds section.hero-content .right {
+  flex: 6;
+  align-self: flex-end;
+  text-align: right;
+  padding-right: 20px;
+  padding-bottom: 20px;
+  color: #fff;
+}
+.hero-backgrounds section.hero-content .right .name {
+  font-weight: 400;
+}
+.hero-backgrounds section.hero-content .right .profession {
+  font-weight: 700;
+}
+.hero-backgrounds.fade-animation {
+  animation: fade 2s linear;
+}
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }/*# sourceMappingURL=fiverr.css.map */

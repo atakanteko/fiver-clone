@@ -1,13 +1,23 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
-const NavLinkItem = ({ menu }) => {
+const NavLinkItem = ({ menu, isScrolled }) => {
+  const { title, url, icon } = menu;
   return (
     <div className="menu-item">
-      {menu.icon ? <menu.icon /> : null}
+      {icon ? (
+        <menu.icon className={`${isScrolled ? "text-black" : "text-white"}`} />
+      ) : null}
       {menu.url ? (
-        <a href={menu.url}>{menu.title}</a>
+        <Link to={url}>
+          <span className={`${isScrolled ? "text-black" : "text-white"}`}>
+            {title}
+          </span>
+        </Link>
       ) : (
-        <span>{menu.title}</span>
+        <span className={`${isScrolled ? "text-black" : "text-white"}`}>
+          {title}
+        </span>
       )}
     </div>
   );

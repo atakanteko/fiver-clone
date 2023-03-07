@@ -1,4 +1,14 @@
 section.navbar-container {
+    position: fixed;
+    top: 0;
+    &.bg-transparent {
+        background-color: transparent;
+        transition: background-color 0.3s linear;
+    }
+    &.bg-white {
+        background-color: #ffffff;
+        transition: background-color 0.3s linear;
+    }
     .navbar {
         display: flex;
         flex-direction: row;
@@ -10,6 +20,12 @@ section.navbar-container {
             font-size: 34px;
             font-weight: 700;
             .text {
+                &.text-white {
+                    color: #fff;
+                }
+                &.text-black {
+                    color: #111;
+                }
             }
             .dot {
                 color: #1dbf73;
@@ -32,12 +48,18 @@ section.navbar-container {
                                 height: 19px;
                             }
                             a,
-                            span {
+                            span,
+                            svg {
+                                &.text-white {
+                                    color: #fff;
+                                }
+                                &.text-black {
+                                    color: #111;
+                                }
                                 text-decoration: none;
-                                color: #111;
                                 font-size: 16px;
                                 line-height: 24px;
-                                font-weight: 600;
+                                font-weight: 500;
                             }
                         }
                     }

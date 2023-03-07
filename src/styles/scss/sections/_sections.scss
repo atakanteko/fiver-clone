@@ -13,6 +13,9 @@ section {
         padding: 0 70px;
     }
     @media screen and (min-width: map-get($gridBreakpoints, xl)) {
-        padding: 0 260px;
+        padding: 0 52px;
+    }
+    @media screen and (min-width: map-get($gridBreakpoints, xxl)) {
+        padding: 0 270px;
     }
 }
