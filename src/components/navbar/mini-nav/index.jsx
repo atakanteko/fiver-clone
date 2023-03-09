@@ -2,7 +2,7 @@ import React from "react";
 
 const MiniNav = () => {
   return (
-    <div className="mini-nav">
+    <div className="mini-nav ">
       <section>
         <ul>
           <li>Graphics & Design</li>
