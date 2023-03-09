@@ -6,8 +6,13 @@ const useScrolled = (intersectionRatio) => {
 
   useEffect(() => {
     const scrolled = () => {
-      if (window.scrollY > valueFromTop) setIsScrolled(true);
-      if (window.scrollY === valueFromTop) setIsScrolled(false);
+      if (valueFromTop === 0) {
+        if (window.scrollY > valueFromTop) setIsScrolled(true);
+        if (window.scrollY === valueFromTop) setIsScrolled(false);
+      } else {
+        if (window.scrollY > valueFromTop) setIsScrolled(true);
+        if (window.scrollY < valueFromTop) setIsScrolled(false);
+      }
     };
     window.addEventListener("scroll", scrolled);
     return () => {

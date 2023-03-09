@@ -1,4 +1,7 @@
-import React, { useRef } from "react";
+import React from "react";
+
+// project import
+import Tag from "../ui/tag/Tag";
 
 // tabler icons
 import { IconSearch } from "@tabler/icons-react";
@@ -9,9 +12,6 @@ import bgHero2 from "../../assets/images/bg-hero-2.png";
 import bgHero3 from "../../assets/images/bg-hero-3.png";
 import bgHero4 from "../../assets/images/bg-hero-4.png";
 import bgHero5 from "../../assets/images/bg-hero-5.png";
-
-// project imports
-import useIntersectionObserver from "../../hooks/useIntersectionObserver";
 
 const images = [
   {
@@ -49,7 +49,6 @@ const Heros = ({ children }) => {
     const intervalId = setInterval(() => {
       setIsTransitioning(true);
       const currentIndex = images.findIndex((x) => x === backgroundImage);
-      console.log(currentIndex);
       const nextIndex = (currentIndex + 1) % images.length;
       setBackgroundImage(images[nextIndex]);
     }, 5000);
@@ -90,7 +89,11 @@ const Heros = ({ children }) => {
             </div>
           </div>
           <div className="tags">
-            <h1>Populer</h1>
+            <h4>Populer: </h4>
+            <Tag tagName="Website Design" />
+            <Tag tagName="WordPress" />
+            <Tag tagName="Logo Design" />
+            <Tag tagName="AI Services" />
           </div>
         </div>
         <div className="right">

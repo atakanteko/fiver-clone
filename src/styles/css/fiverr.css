@@ -207,7 +207,30 @@ section.navbar-container .navbar .links nav ul li .menu-item svg.text-black {
 }
 
 .hero-backgrounds {
+  position: relative;
   min-height: 680px;
+}
+.hero-backgrounds .mini-nav {
+  display: flex;
+  align-items: center;
+  z-index: 100;
+  height: 40px;
+  width: 100%;
+  position: fixed;
+  top: 80px;
+  border-top: 1px solid #e4e5e7;
+  background-color: #ffffff;
+}
+.hero-backgrounds .mini-nav ul {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+.hero-backgrounds .mini-nav ul li {
+  cursor: pointer;
+  color: #74767e;
+  font-size: 16px;
+  font-weight: 400;
 }
 .hero-backgrounds section.hero-content {
   height: 680px;
@@ -266,6 +289,16 @@ section.navbar-container .navbar .links nav ul li .menu-item svg.text-black {
   color: white;
   background-color: #1dbf73;
 }
+.hero-backgrounds section.hero-content .left .tags {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10px;
+}
+.hero-backgrounds section.hero-content .left .tags h4 {
+  font-size: 15px;
+  font-weight: 400;
+}
 .hero-backgrounds section.hero-content .right {
   flex: 6;
   align-self: flex-end;
@@ -290,4 +323,31 @@ section.navbar-container .navbar .links nav ul li .menu-item svg.text-black {
   to {
     opacity: 1;
   }
+}
+
+.tag {
+  height: 27px;
+  width: -moz-max-content;
+  width: max-content;
+  border: 1px solid #fff;
+  border-radius: 40px;
+  color: #fff;
+  padding: 1px 12px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.3s linear;
+}
+.tag:hover {
+  background-color: #fff;
+}
+.tag span {
+  font-weight: 600;
+  font-size: 14px;
+  color: #fff;
+  transition: color 0.3s linear;
+}
+.tag span:hover {
+  color: #111;
 }/*# sourceMappingURL=fiverr.css.map */
